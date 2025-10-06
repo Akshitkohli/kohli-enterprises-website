@@ -1,0 +1,265 @@
+ html { scroll-behavior: smooth; }
+    body {
+      margin: 0;
+      font-family: Arial, sans-serif;
+      color: #232536;
+      background-color: #ffffff;
+      overflow-x: hidden;
+    }
+     @font-face {
+                font-family: font;
+                src: url('./images/made-tommy.regular.otf');
+            }
+
+    /* Header */
+    #header {
+      font-family: font;
+      background-color: #232536;
+      display: flex;
+      justify-content: space-between;
+     margin-right: 100px;
+      align-items: center;
+      height: 80px;
+      width: 100%;
+      position: fixed;
+      top: 0;
+      z-index: 9999;
+      padding: 0 20px;
+    }
+
+    #logoimg img {
+      width: 120px;
+      margin-left: 100px;
+    }
+
+    ul {
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      gap: 40px;
+    margin-right: 100px;
+    margin-left: 100px;
+      padding: 0;
+      list-style: none;
+    }
+
+    li a {
+      color: white;
+      text-decoration: none;
+      font-size: 16px;
+      padding: 5px;
+      transition: all 0.3s ease;
+    }
+
+    li a:hover {
+      color: #FFA155;
+      border-top: 4px solid #FFA155;
+    }
+
+    /* Mobile menu */
+    #menu, #menucross {
+      display: none;
+      cursor: pointer;
+    }
+
+    #phonemenu {
+      display: none;
+      flex-direction: column;
+      background-color: #232536;
+      text-align: center;
+      padding: 10px 0;
+      width: 100%;
+    }
+
+    #phonemenu a {
+      color: white;
+      text-decoration: none;
+      display: block;
+      padding: 10px 0;
+      font-size: 16px;
+    }
+
+    #phonemenu a:hover {
+      color: #FFA155;
+    }
+
+    /* Hero Section */
+    .hero {
+      background-color: #232536;
+      color: white;
+      text-align: center;
+      padding: 160px 20px 100px;
+      margin-top: 80px;
+    }
+
+    .hero h2 {
+      font-size: 48px;
+      margin-bottom: 15px;
+    }
+
+    .hero p {
+      font-size: 18px;
+      max-width: 700px;
+      margin: 0 auto;
+      opacity: 0.9;
+    }
+
+    /* Fade-up animation */
+    .fade-up {
+      opacity: 0;
+      transform: translateY(40px);
+      transition: opacity 0.8s ease, transform 0.8s ease;
+    }
+    .fade-up.show {
+      opacity: 1;
+      transform: translateY(0);
+    }
+
+    /* Services Section */
+    #services {
+      padding: 100px 20px;
+      text-align: center;
+      background-color: #fff;
+    }
+
+    #servicetext h4 {
+      color: #444CFC;
+      letter-spacing: 2px;
+      font-size: 16px;
+      margin-bottom: 10px;
+    }
+
+    #servicetext h2 {
+      font-size: 40px;
+      line-height: 1.2;
+      margin: 10px 0;
+      color: #232536;
+    }
+
+    #servicetext p {
+      font-size: 16px;
+      color: #555;
+      margin-top: 20px;
+      line-height: 1.6;
+    }
+
+    /* Service Cards */
+    #servicenames {
+      display: flex;
+      justify-content: center;
+      flex-wrap: wrap;
+      gap: 40px;
+      margin-top: 70px;
+    }
+
+    .servicesclass {
+      background-color: #fafafa;
+      border: 1px solid #eee;
+      border-radius: 16px;
+      padding: 30px 20px;
+      width: 300px;
+      box-shadow: 0 4px 12px rgba(0, 0, 0, 0.06);
+      transition: all 0.4s ease;
+      opacity: 0;
+      transform: translateY(40px);
+    }
+
+    .servicesclass.show {
+      opacity: 1;
+      transform: translateY(0);
+    }
+
+    .servicesclass:hover {
+      transform: translateY(-10px) scale(1.03);
+      box-shadow: 0 10px 25px rgba(0, 0, 0, 0.1);
+      background-color: #f0e9ff;
+    }
+
+    .servicesclass img {
+      width: 70px;
+      margin-bottom: 15px;
+    }
+
+    .servicesclass h3 {
+      font-size: 20px;
+      color: #232536;
+      margin-bottom: 10px;
+      transition: color 0.3s;
+    }
+
+    .servicesclass p {
+      color: #555;
+      font-size: 15px;
+      line-height: 1.5;
+    }
+
+    .servicesclass:hover h3 {
+      color: #6b47dc;
+    }
+
+    .servicesclass:nth-child(3) {
+      border-bottom: 6px solid;
+      border-image: linear-gradient(to right, orange 33%, #FFDAB9 33% 66%, purple 66%) 1;
+    }
+
+    /* Footer */
+    footer {
+      background-color: #232536;
+      color: white;
+      text-align: center;
+      padding: 30px 20px;
+      font-size: 14px;
+      margin-top: 100px;
+    }
+
+    /* Responsive Design */
+    @media (max-width: 1024px) {
+      .hero h2 {
+        font-size: 38px;
+      }
+    }
+
+    @media (max-width: 768px) {
+      ul {
+        display: none;
+      }
+
+      #menu {
+        display: block;
+      }
+
+      #logoimg img {
+        width: 100px;
+      }
+
+      .hero h2 {
+        font-size: 36px;
+      }
+
+      #servicenames {
+        flex-direction: column;
+        align-items: center;
+      }
+
+      .servicesclass {
+        width: 90%;
+      }
+    }
+
+    @media (max-width: 480px) {
+      .hero {
+        padding: 130px 20px 80px;
+      }
+
+      .hero h2 {
+        font-size: 30px;
+      }
+
+      .hero p {
+        font-size: 15px;
+      }
+
+      #servicetext h2 {
+        font-size: 28px;
+      }
+    }

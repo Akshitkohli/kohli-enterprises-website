@@ -1,0 +1,109 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Contact Us | Kohli Enterprises</title>
+   <link rel="stylesheet" href="style.css" type="text/css">
+   <link rel="stylesheet" href="contact.css" type="text/css">
+    <link rel="icon" type="image/png" href="/images/K (2).png">
+  <style>
+    
+  </style>
+</head>
+<body>
+ <div id="header">
+            <div id="logoimg">
+                <img src="/images/K.png" alt="" width="130px">
+            </div>
+            <div  >
+                <img width="40" height="40" id="menu" src="https://img.icons8.com/ios-filled/50/FFFFFF/menu--v1.png" alt="menu--v1" />
+                <img width="40" height="40" id="menucross" src="https://img.icons8.com/sf-black/64/FFFFFF/multiply.png" alt="multiply"/>
+            </div>
+              
+            <div>
+                <ul>
+                    <li><a href="index.html">Home</a></li>
+                    <li><a href="about.html">About Us</a></li>
+                    <li><a href="service.html">Services</a></li>
+                   
+                    <li><a href="contactus.html">Contact Us</a></li>
+                  </ul>
+            </div>
+        </div>
+
+  <section class="hero">
+    <h2 class="fade-up">Contact Us</h2>
+    <p class="fade-up">We’d love to hear from you! Whether you have a question, project, or just want to say hi — we’re here to help.</p>
+  </section>
+
+  <section class="contact-section">
+    <div class="contact-info fade-up">
+      <h3>Get In Touch</h3>
+      <p>Reach out to us via email, phone, or visit our office. We’re always open for a conversation about your ideas and projects.</p>
+
+      <div class="info-box">
+        <h4>📍 Address</h4>
+        <p>21/3, Mathura Road, Opp. Partap steel Ltd. Rajiv gandhi complex, Ballabgarh(Faridabad.)</p>
+      </div>
+      <div class="info-box">
+        <h4>📞 Phone</h4>
+        <p>+91 9650420890</p>
+      </div>
+      <div class="info-box">
+        <h4>✉️ Email</h4>
+        <p>manveerkohli10@gamil.com</p>
+      </div>
+    </div>
+
+    <div class="contact-form fade-up">
+      <h3>Send a Message</h3>
+      <form id="contactForm">
+        <div class="form-group">
+          <label for="name">Full Name</label>
+          <input type="text" id="name" required placeholder="Your name" />
+        </div>
+        <div class="form-group">
+          <label for="email">Email Address</label>
+          <input type="email" id="email" required placeholder="you@example.com" />
+        </div>
+        <div class="form-group">
+          <label for="message">Message</label>
+          <textarea id="message" rows="5" required placeholder="Write your message here..."></textarea>
+        </div>
+        <button type="submit">Send Message</button>
+      </form>
+    </div>
+  </section>
+
+  <section class="map fade-up">
+    <h3>Find Us on the Map</h3>
+    <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d840.1184871625553!2d77.31499324730976!3d28.34819450593798!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x390cdb8dd41df889%3A0x82c8bf9e80b4bed5!2s21-3-5%2F2%2C%20Pocket%203%2C%20Sanjay%20Memorial%20Industrial%20Estate%2C%20Sector%205%2C%20Faridabad%2C%20Haryana%20121004!5e1!3m2!1sen!2sin!4v1745833972537!5m2!1sen!2sin" allowfullscreen="" loading="lazy"></iframe>
+  </section>
+
+  <footer>
+    &copy; 2025 My Company. All rights reserved.
+  </footer>
+
+  <script>
+  
+    const fadeUps = document.querySelectorAll('.fade-up');
+    window.addEventListener('scroll', () => {
+      fadeUps.forEach(el => {
+        const rect = el.getBoundingClientRect();
+        if (rect.top < window.innerHeight - 100) {
+          el.classList.add('show');
+        }
+      });
+    });
+
+    
+    document.getElementById('contactForm').addEventListener('submit', e => {
+      e.preventDefault();
+      alert('Thank you for contacting us! We will get back to you soon.');
+      e.target.reset();
+    });
+  </script>
+
+</body>
+</html>

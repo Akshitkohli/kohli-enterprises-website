@@ -1,0 +1,206 @@
+    
+    
+html {
+      scroll-behavior: smooth;
+    }
+    body {
+      margin: 0;
+      font-family: font, Arial, sans-serif;
+      color: #232536;
+      background-color: #f9f9f9;
+      overflow-x: hidden;
+    }
+
+    /* Header */
+    header {
+      background-color: #232536;
+      color: white;
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      height: 80px;
+      padding: 0 80px;
+      position: fixed;
+      top: 0;
+      width: 100%;
+      z-index: 999;
+    }
+    header h1 {
+      font-size: 24px;
+      font-weight: 600;
+    }
+    header nav a {
+      color: white;
+      text-decoration: none;
+      margin-left: 25px;
+      transition: color 0.3s;
+    }
+    header nav a:hover {
+      color: #FFA155;
+      border-bottom: 2px solid #FFA155;
+    }
+
+    /* Hero */
+    .hero {
+      background-color: #232536;
+      color: white;
+      text-align: center;
+      padding: 150px 20px 100px;
+    }
+    .hero h2 {
+      font-size: 60px;
+      margin-bottom: 20px;
+    }
+    .hero p {
+      font-size: 18px;
+      max-width: 700px;
+      margin: 0 auto;
+      opacity: 0.8;
+    }
+
+    /* Fade-up Animation */
+    .fade-up {
+      opacity: 0;
+      transform: translateY(40px);
+      transition: opacity 0.8s ease, transform 0.8s ease;
+    }
+    .fade-up.show {
+      opacity: 1;
+      transform: translateY(0);
+    }
+
+    /* Contact Section */
+    .contact-section {
+      display: flex;
+      justify-content: space-between;
+      align-items: flex-start;
+      flex-wrap: wrap;
+      padding: 100px 80px;
+      background-color: white;
+      gap: 50px;
+    }
+    .contact-info {
+      flex: 1;
+      min-width: 280px;
+    }
+    .contact-info h3 {
+      font-size: 40px;
+      margin-bottom: 20px;
+    }
+    .contact-info p {
+      opacity: 0.8;
+      line-height: 1.6;
+      font-size: 16px;
+    }
+    .info-box {
+      background-color: #ECF8F9;
+      padding: 20px;
+      border-left: 6px solid #444CFC;
+      border-radius: 10px;
+      margin-top: 20px;
+    }
+    .info-box h4 {
+      margin-bottom: 5px;
+      color: #232536;
+    }
+    .info-box p {
+      margin: 0;
+      font-size: 15px;
+      opacity: 0.8;
+    }
+
+    /* Form */
+    .contact-form {
+      flex: 1;
+      min-width: 320px;
+      background-color: #FFE6D2;
+      padding: 40px;
+      border-radius: 20px;
+      box-shadow: 0 6px 20px rgba(0,0,0,0.1);
+    }
+    .contact-form h3 {
+      color: #232536;
+      font-size: 28px;
+      margin-bottom: 20px;
+    }
+    .form-group {
+      margin-bottom: 20px;
+    }
+    .form-group label {
+      display: block;
+      margin-bottom: 8px;
+      font-weight: 500;
+    }
+    .form-group input,
+    .form-group textarea {
+      width: 100%;
+      padding: 12px 15px;
+      border: 2px solid #ddd;
+      border-radius: 10px;
+      font-size: 16px;
+      transition: all 0.3s;
+    }
+    .form-group input:focus,
+    .form-group textarea:focus {
+      border-color: #444CFC;
+      outline: none;
+    }
+    button {
+      background-color: #444CFC;
+      color: white;
+      border: none;
+      padding: 12px 30px;
+      border-radius: 10px;
+      font-size: 16px;
+      cursor: pointer;
+      transition: all 0.3s;
+    }
+    button:hover {
+      background-color: #232536;
+      transform: scale(1.05);
+    }
+
+    /* Map */
+    .map {
+      text-align: center;
+      padding: 80px 20px;
+      background-color: #ECF8F9;
+    }
+    .map h3 {
+      font-size: 40px;
+      margin-bottom: 30px;
+      color: #232536;
+    }
+    iframe {
+      width: 80%;
+      height: 400px;
+      border: 0;
+      border-radius: 15px;
+      box-shadow: 0 6px 20px rgba(0,0,0,0.1);
+    }
+
+    /* Footer */
+    footer {
+      background-color: #232536;
+      color: white;
+      text-align: center;
+      padding: 30px;
+      font-size: 14px;
+    }
+
+    /* Responsive */
+    @media (max-width: 900px) {
+      .contact-section {
+        flex-direction: column;
+        padding: 60px 20px;
+      }
+      .contact-info h3 {
+        text-align: center;
+      }
+      .contact-form {
+        margin-top: 30px;
+      }
+      iframe {
+        width: 95%;
+      }
+    }

@@ -1,0 +1,110 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Our Services | Kohli Enterprises</title>
+  <link rel="icon" type="image/png" href="/images/K (2).png">
+<link rel="stylesheet" href="service.css" type="text/css">
+  
+</head>
+<body>
+  <!-- Header -->
+  <div id="header">
+    <div id="logoimg">
+      <img src="/images/K.png" alt="Logo">
+    </div>
+    <div>
+      <img width="35" height="35" id="menu" src="https://img.icons8.com/ios-filled/50/FFFFFF/menu--v1.png" alt="menu" />
+      <img width="35" height="35" id="menucross" src="https://img.icons8.com/sf-black/64/FFFFFF/multiply.png" alt="close"/>
+    </div>
+    <ul>
+      <li><a href="index.html">Home</a></li>
+      <li><a href="about.html">About Us</a></li>
+      <li><a href="#services">Services</a></li>
+     
+      <li><a href="contactus.html">Contact Us</a></li>
+    </ul>
+  </div>
+
+  <!-- Mobile Menu -->
+  <div id="phonemenu">
+    <a href="index.html">Home</a>
+    <a href="about.html">About Us</a>
+    <a href="service.html">Services</a>
+    
+    <a href="contactus.html">Contact Us</a>
+  </div>
+
+  <!-- Hero Section -->
+  <section class="hero fade-up">
+    <h2>Our Services</h2>
+    <p>Comprehensive solutions for industrial excellence. Explore our key areas of expertise below.</p>
+  </section>
+
+  <!-- Services Section -->
+  <section id="services">
+    <div id="servicetext" class="fade-up">
+      <h4>OUR EXPERTISE</h4>
+      <h2>Comprehensive solutions</h2>
+      <h2>for industrial excellence</h2>
+      <p>We provide a wide range of services tailored to meet the unique needs of modern industries.  
+      From precision manufacturing and advanced automation to custom product design and efficient logistics.</p>
+    </div>
+
+    <div id="servicenames">
+      <div class="servicesclass fade-up">
+        <img src="/images/954-9545821_power-press-machine.webp" alt="Power Press">
+        <h3>Power Press</h3>
+        <p>We provide a wide range of power press products for various industrial applications.</p>
+      </div>
+
+      <div class="servicesclass fade-up">
+        <img src="/images/r12-removebg-preview.png" alt="Tooling">
+        <h3>Tooling (Dies) / Power Press Tools</h3>
+        <p>We supply and manufacture all types of tooling and dies tailored to your production needs.</p>
+      </div>
+
+      <div class="servicesclass fade-up">
+        <img src="https://img.icons8.com/ios/50/threading-metal.png" alt="Fixtures">
+        <h3>Fixtures</h3>
+        <p>We design and build precision fixtures for CNC machines and component analysis.</p>
+      </div>
+    </div>
+  </section>
+
+  <footer>
+    &copy; 2025 My Company. All rights reserved.
+  </footer>
+
+  <script>
+    // Scroll fade-up effect
+    const fadeUps = document.querySelectorAll('.fade-up, .servicesclass');
+    window.addEventListener('scroll', () => {
+      fadeUps.forEach(el => {
+        const rect = el.getBoundingClientRect();
+        if (rect.top < window.innerHeight - 100) {
+          el.classList.add('show');
+        }
+      });
+    });
+
+    // Mobile menu toggle
+    const menu = document.getElementById('menu');
+    const menucross = document.getElementById('menucross');
+    const phonemenu = document.getElementById('phonemenu');
+
+    menu.addEventListener('click', () => {
+      phonemenu.style.display = 'flex';
+      menu.style.display = 'none';
+      menucross.style.display = 'block';
+    });
+
+    menucross.addEventListener('click', () => {
+      phonemenu.style.display = 'none';
+      menu.style.display = 'block';
+      menucross.style.display = 'none';
+    });
+  </script>
+</body>
+</html>
